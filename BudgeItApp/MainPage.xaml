@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgeItApp.MainPage">
+
+
+    <StackLayout Margin="45,30" Spacing="20">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Image
+                        Source="blogo.png"
+                        HeightRequest="300"
+                        Aspect="AspectFit"
+                        SemanticProperties.Description="logo"/>
+            <Frame BorderColor="#dfffb3" BackgroundColor="#dfffb3" CornerRadius="20" Margin="20,-60,20,130">
+                <Label
+                        Text="Make every cent count for you!"
+                        FontSize="15"
+                        TextColor="MidnightBlue"
+                        Style="{StaticResource Headline}"
+                        SemanticProperties.HeadingLevel="Level1"/>
+            </Frame>
+        </StackLayout>
+
+        <Button
+                x:Name="CounterBtn" BackgroundColor="DarkGreen" CornerRadius="20" WidthRequest="115"
+                Text="Start Saving!" 
+                FontSize="14"
+                SemanticProperties.Hint="Navigate to Page 1 "
+                Clicked="GoPone"
+                VerticalOptions="End"
+                HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

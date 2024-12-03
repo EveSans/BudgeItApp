@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgeItApp.NewPage1"
+             Title="NewPage1"
+             BackgroundColor="White">
+    
+    <!--logo and deposit line -->
+    <StackLayout Margin="0,30">
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Image Margin="20,-60,20,130"
+                    Source="blogo.png"
+                    HeightRequest="100"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="logo"/>
+            <Frame BorderColor="White" BackgroundColor="#dfffb3" Margin="0,-160" MaximumHeightRequest="70">
+                <Label  
+                    Text="Deposit"
+                    FontSize="20"
+                    TextColor="MidnightBlue"
+                    FontAttributes="Bold"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center" />
+            </Frame>
+        </StackLayout>
+
+        <!--Date entry -->
+        <StackLayout Margin="25,450,250,305">
+            <Label
+                Text="Enter a Date:"
+                FontSize="15"
+                FontAttributes="Bold"/>
+            <Frame BackgroundColor="#889970" CornerRadius="0" Padding="-1" BorderColor="MidnightBlue">
+                <DatePicker />
+            </Frame>
+        <!-- Paycheck Amount Entry -->
+            <Label Text="Enter Paycheck Amount:" FontSize="15" FontAttributes="Bold" />
+            <Frame BackgroundColor="#889970" CornerRadius="0" Padding="-1" BorderColor="MidnightBlue">
+                <Entry x:Name="PaycheckAmountEntry" Keyboard="Numeric" Placeholder="e.g., 200.56" />
+            </Frame>
+
+        <!-- Percentage Picker -->
+            <Label Text="Pick a % Split:" FontSize="15" FontAttributes="Bold" />
+            <Frame BackgroundColor="#889970" CornerRadius="0" Padding="-1" BorderColor="MidnightBlue">
+                <Picker x:Name="PercentagePicker" Title="Select Option" SelectedIndexChanged="OnPercentagePickerChanged" />
+            </Frame>
+
+            <!-- Display Split Results -->
+
+
+        </StackLayout>
+
+ 
+
+        <!--Button -->
+            <Button
+            x:Name="CounterBtn" BackgroundColor="DarkGreen" CornerRadius="25" WidthRequest="75"
+            Text="Track" 
+            SemanticProperties.Hint="Navigate to Page 2"
+            Clicked="GoPtwo"
+            HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>
