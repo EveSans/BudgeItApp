@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:BudgeItApp.ViewModels"
              x:Class="BudgeItApp.NewPage2"
              Title="NewPage2"
              BackgroundColor="White">
-    <StackLayout Margin="0,30">
-        <StackLayout VerticalOptions="StartAndExpand">
-            <Image Margin="20,-60,20,130"
-                    Source="blogo.png"
-                    HeightRequest="100"
+
+    <ContentPage.BindingContext>
+        <vm:SplitViewModel />
+    </ContentPage.BindingContext>
+
+
+    <StackLayout>
+        <StackLayout VerticalOptions="Start">
+            <Image Margin="0,-30,0,0"
+                    Source="blogo.png" 
+                    HeightRequest="140"  
                     Aspect="AspectFit"
                     SemanticProperties.Description="logo"/>
-            <Frame BorderColor="White" BackgroundColor="#dfffb3" Margin="0,-160" MaximumHeightRequest="70">
-                <Label 
+            <Frame BorderColor="#dfffb3" BackgroundColor="#dfffb3" Margin="0,-40,0,9" MaximumHeightRequest="70">
+                <Label
                     Text="Track"
                     FontSize="20"
                     TextColor="MidnightBlue"
@@ -22,7 +29,19 @@
             </Frame>
         </StackLayout>
 
-        <Button
+        <!-- Goal Amount Entry -->
+        <StackLayout VerticalOptions="StartAndExpand" Margin="10">
+            <Label Text="Enter a Goal Amount:" FontSize="15" FontAttributes="Bold" />
+            <Frame BackgroundColor="#A1B795" Padding="0" CornerRadius="5" BorderColor="#A1B795">
+                <Entry Text="{Binding GoalAmount}" Keyboard="Numeric" Placeholder="e.g., 500" />
+            </Frame>
+            <Frame HorizontalOptions="Center" BorderColor="White">
+                <Label Text="{Binding GoalDifference, StringFormat='You\'re ${0:0.00} from reaching your goal!'}" FontSize="15"/>
+            </Frame>
+        </StackLayout>
+
+
+        <Button Margin="35" 
             x:Name="CounterBtn" BackgroundColor="DarkGreen" CornerRadius="20" WidthRequest="65"
             Text="Split" 
             SemanticProperties.Hint="Navigate to Page 3"
