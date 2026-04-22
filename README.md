@@ -9,19 +9,23 @@ The Budge-iT app will track and categorize spending and savings into percentages
 
 How to Install and Run:
  1. Clone the repo: git clone <repo-url>
- 2. Open the project folder BudgeItApp in IntelliJ IDEA (File → Open).
- 3. 3Wait for IDEA to index and download dependencies (if prompted).
- 4. Build the project: Build → Build Project.
- 5. Run the app: Run → Run 'Main' (or the appropriate run configuration).
+ 2. Open the project folder BudgeItApp in IDE (File → Open). This is a .NET MAUI project, Visual Studio, preferred. IntelliJ is not Supported for .NET projects.
+ 3. Wait for IDEA to restore NuGet packages and index the project.
+ 4. Build the project: Build → Build Solution.
+    Command line: dotnet build
+ 5. Run the app: Visual Studio: select target (Android/iOS/Windows/MacCatalyst) and Run.
     Troubleshooting:
-        If dependencies fail, ensure JDK is installed (Go to the Official JDK website to download the file: https://www.oracle.com/java/technologies/downloads/) and selected: File → Project Structure → Project SDK.
-        If build tools are used (Gradle/Maven), run from terminal: ./gradlew run or mvn spring-boot:run.
+        If dependencies package restore fails, ensure .NET 8 SDK is installed and active. Check with command: dotnet --version
 
-Optional notes: Required JDK: 18.0.2.1 (for optimal use)
-    Dependencies: Gradle/Maven — mention which and include command examples.
+Optional notes: Required .NET SDK: .NET 8
+NuGet dependencies:
+
+    Microsoft.Maui.Controls — 8.0.0
+    Microsoft.Maui.Controls.Compatibility — 8.0.0
+    Microsoft.Extensions.Logging.Debug — 8.0.0
 
 Preconditions: 
-The user should know paycheck amounts and have internet connection as well a computer and IDEA, Windows preferrably. 
+The user should know paycheck amounts and have internet connection as well a computer and IDE, Windows preferrably. 
 
 Test Steps:
   1. Open the Budge-iT app
