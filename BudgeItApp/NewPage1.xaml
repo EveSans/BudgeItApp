@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:BudgeItApp.ViewModels"
              x:Class="BudgeItApp.NewPage1"
              Title="NewPage1"
              BackgroundColor="White">
-    
+
+    <ContentPage.BindingContext>
+        <vm:SplitViewModel />
+    </ContentPage.BindingContext>
+
     <!--logo and deposit line -->
-    <StackLayout Margin="0,30">
-        <StackLayout VerticalOptions="StartAndExpand">
-            <Image Margin="20,-60,20,130"
-                    Source="blogo.png"
-                    HeightRequest="100"
-                    Aspect="AspectFit"
+    <StackLayout >
+        <StackLayout VerticalOptions="Start">
+            <Image Margin="0,-30,0,0"
+                    Source="blogo.png" 
+                    HeightRequest="140"  
+                    Aspect="AspectFit" 
                     SemanticProperties.Description="logo"/>
-            <Frame BorderColor="White" BackgroundColor="#dfffb3" Margin="0,-160" MaximumHeightRequest="70">
+            <Frame BorderColor="#dfffb3" BackgroundColor="#dfffb3" Margin="0,-40,0,9" MaximumHeightRequest="70">
                 <Label  
-                    Text="Deposit"
-                    FontSize="20"
-                    TextColor="MidnightBlue"
+                    Text="Deposit" 
+                    FontSize="20" 
+                    TextColor="MidnightBlue" 
                     FontAttributes="Bold"
                     VerticalOptions="Start"
                     HorizontalOptions="Center" />
@@ -25,36 +30,42 @@
         </StackLayout>
 
         <!--Date entry -->
-        <StackLayout Margin="25,450,250,305">
-            <Label
-                Text="Enter a Date:"
-                FontSize="15"
-                FontAttributes="Bold"/>
-            <Frame BackgroundColor="#889970" CornerRadius="0" Padding="-1" BorderColor="MidnightBlue">
+        <StackLayout VerticalOptions="Start" Margin="10">
+            <Label Text="Enter a Date:" FontSize="15" FontAttributes="Bold" />
+            <Frame BackgroundColor="#A1B795" Padding="0" CornerRadius="5" BorderColor="#A1B795" >
                 <DatePicker />
             </Frame>
+            
         <!-- Paycheck Amount Entry -->
             <Label Text="Enter Paycheck Amount:" FontSize="15" FontAttributes="Bold" />
-            <Frame BackgroundColor="#889970" CornerRadius="0" Padding="-1" BorderColor="MidnightBlue">
-                <Entry x:Name="PaycheckAmountEntry" Keyboard="Numeric" Placeholder="e.g., 200.56" />
+            <Frame BackgroundColor="#A1B795" CornerRadius="5" Padding="0" BorderColor="#A1B795">
+                <Entry x:Name="PaycheckAmountEntry" Text="{Binding PaycheckAmount}" Keyboard="Numeric" Placeholder="e.g., 200.56" />
             </Frame>
 
         <!-- Percentage Picker -->
             <Label Text="Pick a % Split:" FontSize="15" FontAttributes="Bold" />
-            <Frame BackgroundColor="#889970" CornerRadius="0" Padding="-1" BorderColor="MidnightBlue">
-                <Picker x:Name="PercentagePicker" Title="Select Option" SelectedIndexChanged="OnPercentagePickerChanged" />
+            <Frame BackgroundColor="#A1B795" CornerRadius="5" Padding="1" BorderColor="#A1B795">
+                <Picker ItemsSource="{Binding PercentageOptions}" SelectedItem="{Binding SelectedPercentageOption}"/>
             </Frame>
-
-            <!-- Display Split Results -->
-
-
         </StackLayout>
 
- 
+        <!-- Display Split Results -->
+        <StackLayout VerticalOptions="Start" Margin="5">
+            <Label Text="Split Amounts:" FontSize="15" FontAttributes="Bold" Margin="7"/>
+            <Frame BackgroundColor="#CDECB9" Margin="5" BorderColor="#CDECB9">
+                <Label x:Name="Split1Label" Text="{Binding Savings, StringFormat='Percentage 1: ${0:0.00}'}" FontSize="14"/>
+            </Frame>
+            <Frame BackgroundColor="#A2D087" Margin="5" BorderColor="#A2D087">
+                <Label x:Name="Split2Label" Text="{Binding Spending, StringFormat='Percentage 2: ${0:0.00}'}" FontSize="14"/>
+            </Frame>
+            <Frame BackgroundColor="#8ACE63" Margin="5" BorderColor="#8ACE63">
+                <Label x:Name="Split3Label" Text="{Binding Other, StringFormat='Percentage 3: ${0:0.00}'}"  FontSize="14"/>
+            </Frame>
+        </StackLayout>
 
         <!--Button -->
-            <Button
-            x:Name="CounterBtn" BackgroundColor="DarkGreen" CornerRadius="25" WidthRequest="75"
+        <Button Margin="20"
+            x:Name="CounterBtn" BackgroundColor="DarkGreen" CornerRadius="25" WidthRequest="100"
             Text="Track" 
             SemanticProperties.Hint="Navigate to Page 2"
             Clicked="GoPtwo"
