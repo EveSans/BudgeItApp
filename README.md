@@ -1,3 +1,5 @@
+/Non-commercial use: This project is for coursework/resume use only; not for commercial distribution/
+
 Title:
 Budge It App
 
@@ -5,8 +7,18 @@ Purpose:
 Budge-iT is a visual money tracker for students at UTA, to help them meet their financial goals and designed to help students have more control and management over their finances. 
 The Budge-iT app will track and categorize spending and savings into percentages, as well as provide visuals of their budgeting in form of different charts and have positive alerts when personal budgets are close to or reach their goals.
 
-How to Install:
-Download all code files from BudgeItApp folder and open in IDEA, after successful download build and run app through IDEA.
+How to Install and Run:
+ 1. Clone the repo: git clone <repo-url>
+ 2. Open the project folder BudgeItApp in IntelliJ IDEA (File → Open).
+ 3. 3Wait for IDEA to index and download dependencies (if prompted).
+ 4. Build the project: Build → Build Project.
+ 5. Run the app: Run → Run 'Main' (or the appropriate run configuration).
+    Troubleshooting:
+        If dependencies fail, ensure JDK is installed (Go to the Official JDK website to download the file: https://www.oracle.com/java/technologies/downloads/) and selected: File → Project Structure → Project SDK.
+        If build tools are used (Gradle/Maven), run from terminal: ./gradlew run or mvn spring-boot:run.
+
+Optional notes: Required JDK: 18.0.2.1 (for optimal use)
+    Dependencies: Gradle/Maven — mention which and include command examples.
 
 Preconditions: 
 The user should know paycheck amounts and have internet connection as well a computer and IDEA, Windows preferrably. 
