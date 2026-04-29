@@ -28,7 +28,7 @@ Preconditions:
 The user should know paycheck amounts and have internet connection as well a computer and IDE, Windows preferrably. 
 
 Test Steps:
-  1. Open the Budge-iT app
+  1. Open the Budge-iT app ![Image Alt](https://github.com/EveSans/BudgeItApp/blob/master/App%20Screenshots/SSBIt1.jpg?raw=true)
   2. Wait for the page to load and locate the “Start Saving!” button and click to go to the next screen
   3. Navigate to the Deposit page and enter unique values for the “Date” and “Paycheck Amount” fields. Also pick an option from the “Percentage Split” field. Browse to the bottom to see updated split amounts of the input paycheck amount. Then once done with inputs locate the “Track button” and click to go to the next screen.
   4. Navigate to the Tracking page and enter a unique value for a “Goal Amount”. Browse through the page to see how close you are to the input goal. Next locate the “Split” button and click to go to the next page. 
