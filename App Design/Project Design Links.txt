@@ -1,0 +1,12 @@
+Project Design
+    • Your persona.
+        ◦ https://www.figma.com/design/wYZmstPOVyvfMUYXso8UhR/Persona-Template-(Copy)?node-id=1-2&t=BZd8o1kGG9NpuCWn-1 
+
+    • Your journey map.
+        ◦ https://www.figma.com/design/bugS7az7pmVPRe9S7x9dni/Journey-Map-(Copy)?node-id=20-8&t=8jHRSesnrAbhhZVh-1 
+
+    • A link to your wireframes in Figma.
+        ◦ https://www.figma.com/design/VByiiAUAVoqhl519Z0Cq2S/Budge-iT-Wireframes?node-id=0-1&t=k2VJ8VvmTqlEsadi-1 
+
+    • A link to your prototype in Figma.
+    • https://www.figma.com/design/Q2ORfSSHuJZiRaB7JU8y4P/Budge-iT-Prototype?node-id=0-1&t=ZukhaUVi5VVZQm1V-1 
