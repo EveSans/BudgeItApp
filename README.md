@@ -1,5 +1,4 @@
 /Non-commercial use: This project is for coursework/resume use only; not for commercial distribution/
-
 /App Design folder includes Stories, Personas, Figma Wireframes and Prototypes/
 
 Title:
