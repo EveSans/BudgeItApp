@@ -12,15 +12,15 @@ Purpose:
 Budge-iT is a visual money tracker for students at UTA, to help them meet their financial goals and designed to help students have more control and management over their finances. 
 The Budge-iT app will track and categorize spending and savings into percentages, as well as provide visuals of their budgeting in form of different charts and have positive alerts when personal budgets are close to or reach their goals.
 
+Preconditions: 
+The user should know paycheck amounts and have internet connection as well a computer and IDE, Windows preferrably. 
+
 Notes: Required .NET SDK: .NET 8
 NuGet dependencies:
 
     Microsoft.Maui.Controls — 8.0.0
     Microsoft.Maui.Controls.Compatibility — 8.0.0
     Microsoft.Extensions.Logging.Debug — 8.0.0
-
-Preconditions: 
-The user should know paycheck amounts and have internet connection as well a computer and IDE, Windows preferrably. 
 
 How to Install and Run:
  1. Clone the repo: git clone <repo-url>
